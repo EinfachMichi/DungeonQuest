@@ -5,7 +5,8 @@ namespace Units
     [CreateAssetMenu(fileName = "New Enemy", menuName = "Custom/Enemy")]
     public class EnemyData : ScriptableObject
     {
-        [Header("Base")]
+        [Header("Base")] 
+        public Sprite icon;
         public string name;
         public int level = 1;
         public float baseMaxHealth = 5;

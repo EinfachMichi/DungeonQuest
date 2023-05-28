@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3416ee7509ab4aa5a62e9f585356822d, type: 3}
   m_Name: 1_Zombie
   m_EditorClassIdentifier: 
-  name: Zombie
+  icon: {fileID: -836902263, guid: 1350125c2accc124cb2f83416df838c2, type: 3}
+  name: Goblin
   level: 1
   baseMaxHealth: 5
   baseDamage: 1
   baseMinGoldDrop: 1
   baseMaxGoldDrop: 2
   baseExperienceDrop: 5
+  baseRegeneration: 0
   maxHealthPerLevel: 5
   damagePerLevel: 1
+  regnerationPerLevel: 0.25
+  minGoldDropPerLevel: 2
+  maxGoldDropPerLevel: 3
+  experienceDropPerLevel: 5

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3416ee7509ab4aa5a62e9f585356822d, type: 3}
   m_Name: 2_Skeleton
   m_EditorClassIdentifier: 
+  icon: {fileID: -1934048198, guid: 6b7b46185c7e90b4dbf20a9458742ff6, type: 3}
   name: Skeleton
   level: 1
   baseMaxHealth: 3
@@ -19,5 +20,10 @@ MonoBehaviour:
   baseMinGoldDrop: 1
   baseMaxGoldDrop: 2
   baseExperienceDrop: 5
+  baseRegeneration: 0
   maxHealthPerLevel: 3
   damagePerLevel: 2
+  regnerationPerLevel: 0.25
+  minGoldDropPerLevel: 2
+  maxGoldDropPerLevel: 3
+  experienceDropPerLevel: 5

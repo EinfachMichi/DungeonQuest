@@ -1,5 +1,6 @@
 ﻿using System;
 using Main;
+using UnityEngine;
 
 namespace Units
 {
@@ -32,6 +33,7 @@ namespace Units
 
         public Ally(AllyData allyData)
         {
+            icon = allyData.icon;
             name = allyData.name;
             level = allyData.level;
             baseMaxHealth = allyData.baseMaxHealth;

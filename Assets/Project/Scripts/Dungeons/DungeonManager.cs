@@ -7,6 +7,8 @@ namespace Dungeons
 {
     public class DungeonManager : Singleton<DungeonManager>, ITickable
     {
+        public event Action<Dungeon> OnDungeonEntered;
+
         private List<Dungeon> dungeons = new();
 
         #region Properties
@@ -33,19 +35,29 @@ namespace Dungeons
             }
         }
 
-        public void EnterDungeon(Ally ally, int index)
+        public void EnterDungeon(Ally ally, Dungeon dungeon)
         {
-            if (dungeons[index].Active) return;
+            if (dungeon.Active) return;
             
-            dungeons[index] = new Dungeon(ally, (DungeonData) Archive.Instance.Dungeons[index]);
-            dungeons[index].Active = true;
+            dungeon.ResetDungeon(ally, (DungeonData) Archive.Instance.Dungeons[dungeon.Info.ID - 1]);
+            dungeon.Active = true;
+        }
+
+        public bool AllyInDungeon(Ally ally)
+        {
+            foreach (Dungeon dungeon in dungeons)
+            {
+                if (dungeon.Info.Ally == ally) return true;
+            }
+
+            return false;
         }
 
         public void ExitDungeon(int index)
         {
             if (!dungeons[index].Active) return;
 
-            dungeons[index].Active = false;
+            dungeons[index].Exit();
         }
     }
 }

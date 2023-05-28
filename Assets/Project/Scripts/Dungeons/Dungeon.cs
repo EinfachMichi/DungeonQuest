@@ -31,7 +31,8 @@ namespace Dungeons
             }
 
             ID = data.ID;
-            
+
+            currentEnemyIndex = 0;
             int length = data.EnemyDatas.Length;
             enemies = new Enemy[length];
             for (int i = 0; i < length; i++)
@@ -96,6 +97,31 @@ namespace Dungeons
                 // TODO: Reward Ally
             }
 
+            Active = false;
+        }
+
+        public void ResetDungeon(Ally ally, DungeonData data)
+        {
+            this.ally = ally;
+            ally.OnDeath += AllyDeath;
+            
+            currentEnemyIndex = 0;
+            int length = data.EnemyDatas.Length;
+            enemies = new Enemy[length];
+            for (int i = 0; i < length; i++)
+            {
+                enemies[i] = new Enemy(data.EnemyDatas[i]);
+            }
+
+            enemy = enemies[currentEnemyIndex];
+            enemy.OnDeath += EnemyDeath;
+
+            enemiesInDungeon = length;
+        }
+
+        public void Exit()
+        {
+            ally = null;
             Active = false;
         }
 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9698e2839d4d00a7b15c3ac6c6bdce, type: 3}
+  m_Name: 1_Steve
+  m_EditorClassIdentifier: 
+  icon: {fileID: 819841993, guid: 03c795a4d121ab245a11397e3539eca2, type: 3}
+  name: Steve
+  level: 1
+  baseMaxHealth: 20
+  baseDamage: 1
+  baseRegeneration: 1
+  maxHealthPerLevel: 5
+  damagePerLevel: 1
+  maxExperiencePerLevel: 1.5
+  regenerationPerLevel: 0.25

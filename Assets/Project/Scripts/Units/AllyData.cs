@@ -5,7 +5,8 @@ namespace Units
     [CreateAssetMenu(fileName = "New Ally", menuName = "Custom/Ally")]
     public class AllyData : ScriptableObject
     {
-        [Header("Base")]
+        [Header("Base")] 
+        public Sprite icon;
         public string name;
         public int level = 1;
         public float baseMaxHealth = 20;

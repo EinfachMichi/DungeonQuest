@@ -1,4 +1,5 @@
 ﻿using Main;
+using UnityEngine;
 
 namespace Units
 {
@@ -12,6 +13,7 @@ namespace Units
         protected float baseMaxHealth;
         protected float baseDamage;
         protected float baseRegeneration;
+        protected Sprite icon;
             
         protected float maxHealthPerLevel;
         protected float damagePerLevel;
@@ -51,7 +53,8 @@ namespace Units
             }
         }
         public float Health => health;
-
+        public Sprite Icon => icon;
+        
         #endregion
 
         public Unit()

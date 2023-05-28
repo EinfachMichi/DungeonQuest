@@ -48,6 +48,7 @@ namespace Units
 
         public Enemy(EnemyData enemyData)
         {
+            icon = enemyData.icon;
             name = enemyData.name;
             level = enemyData.level;
             baseMaxHealth = enemyData.baseMaxHealth;
